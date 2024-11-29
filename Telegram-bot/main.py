@@ -1,7 +1,7 @@
 import telebot
 import webbrowser
 
-bot = telebot.TeleBot("7830554349:AAHlAKM1UmynK3HPEM1LxL9zk7zHsFA7cvc")
+bot = telebot.TeleBot("")
 
 @bot.message_handler(commands = ["start"])
 def main(massage):
