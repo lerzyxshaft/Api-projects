@@ -15,6 +15,8 @@ def info_eng(message):
         bot.send_message(message.chat.id, "Мы создаем телеграм каналы любой сложности!")
     elif message.text.lower() == "id":
         bot.reply_to(message, f'ID: {message.from_user.id}')
+    elif message.text.lower() == "about"
+        bot.send_message(message.chat.id, "Bot was created to check all the problems ")
 
 @bot.message_handler(commands = ["site", "website"])
 def site(message):
