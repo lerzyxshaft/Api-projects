@@ -13,12 +13,12 @@
 </head>
 <body>
     <aside>
-        <img src="{% static 'main/img/foto.jpg' %}" alt="Logo" width = "700" height="700" style = "position: relative; bottom: 420px; right: 8px;">
-        <span class = "foto">Rezyx</span>
+        <img src="{% static 'main/img/logo.jpg' %}" alt="logo">
+        <span class="logo">Rezyx</span>
         <h3>Navigation</h3>
         <ul>
-            <a href = ""><li><i class="bi bi-house"></i> Main page</li></a>
-            <a href = ""><li><i class="bi bi-info"></i>Aboout us</li></a>
+            <a href = "{% url 'home' %}"><li><i class="bi bi-house"></i> Main page</li></a>
+            <a href = "{% url 'about' %}"><li><i class="bi bi-info"></i>Aboout us</li></a>
             <a href = ""><li><i class="bi bi-telephone-fill"></i>Contacts</li></a>
         </ul>
     </aside>
