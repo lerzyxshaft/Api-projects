@@ -17,6 +17,8 @@ def info_eng(message):
         bot.reply_to(message, f'ID: {message.from_user.id}')
     elif message.text.lower() == "about"
         bot.send_message(message.chat.id, "Bot was created to check all the problems ")
+    elif message.text_lower() == "me":
+        bot.send.message(message.shat.id)
 
 @bot.message_handler(commands = ["site", "website"])
 def site(message):
