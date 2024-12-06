@@ -24,6 +24,8 @@ def info_eng(message):
 def site(message):
     webbrowser.open('https://web.telegram.org/k/')
 
+def menu
+
 @bot.message_handler(commands = ["help"])
 def main(massage):
     bot.send_message(massage.chat.id, "<b>Данный бот создан для наглядного примера работы ботов в телеграмме<b/>", parse_mode = "html")
