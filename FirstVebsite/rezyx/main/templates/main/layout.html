@@ -1,5 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,12 +12,12 @@
 </head>
 <body>
     <aside>
-        <img src="{% static 'main/img/logo.jpg' %}" alt="logo">
+        <img src="{% static 'main/img/logo.jpg' %}" alt="logo" style="width: 77px">
         <span class="logo">Rezyx</span>
         <h3>Navigation</h3>
         <ul>
             <a href = "{% url 'home' %}"><li><i class="bi bi-house"></i> Main page</li></a>
-            <a href = "{% url 'about' %}"><li><i class="bi bi-info"></i>Aboout us</li></a>
+            <a href = "{% url 'about' %}"><li><i class="bi bi-info"></i>About us</li></a>
             <a href = ""><li><i class="bi bi-telephone-fill"></i>Contacts</li></a>
         </ul>
     </aside>

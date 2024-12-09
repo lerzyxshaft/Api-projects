@@ -1,33 +1,24 @@
 import telebot
-import webbrowser
+import sqlite3
 
-bot = telebot.TeleBot("")
+from django.contrib.messages.context_processors import messages
+
+bot = telebot.TeleBot("7830554349:AAHlAKM1UmynK3HPEM1LxL9zk7zHsFA7cvc")
 
 @bot.message_handler(commands = ["start"])
-def main(massage):
-    bot.send_message(massage.chat.id, f"Привет! {massage.from_user.first_name}, {massage.from_user.last_name }")
+def start(massage):
+    conn = sqlite3.connect('rezyx.sql')
+    cur = conn.cursor()
+    cur.execute('CREATE TABLE IF NOT EXISTS users (id int auto_increment primary key, name varchar(50), pass varchar(50)')
+    conn.commit()
+    cur.close()
+    conn.close()
 
-@bot.message_handler()
-def info_eng(message):
-    if message.text.lower() == "Info":
-        bot.send_message(message.chat.id, "We creating telegram's bots any difficulty levels!")
-    elif message.text.lower() == "Инфо":
-        bot.send_message(message.chat.id, "Мы создаем телеграм каналы любой сложности!")
-    elif message.text.lower() == "id":
-        bot.reply_to(message, f'ID: {message.from_user.id}')
-    elif message.text.lower() == "about"
-        bot.send_message(message.chat.id, "Bot was created to check all the problems ")
-    elif message.text_lower() == "me":
-        bot.send.message(message.shat.id)
+    bot.send_message(message.chat.id, "hello just a second we will register you, Print your name")
+    bot.register_next_step_handler(message, user_name)
 
-@bot.message_handler(commands = ["site", "website"])
-def site(message):
-    webbrowser.open('https://web.telegram.org/k/')
-
-def menu
-
-@bot.message_handler(commands = ["help"])
-def main(massage):
-    bot.send_message(massage.chat.id, "<b>Данный бот создан для наглядного примера работы ботов в телеграмме<b/>", parse_mode = "html")
+def user_name(message):
+    name = message.text.strip()
+    bot
 
 bot.polling(none_stop = True)

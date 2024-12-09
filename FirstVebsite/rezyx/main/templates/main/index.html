@@ -1,10 +1,11 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Main page{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <h1>Main page</h1>
-    <p>Main page</p>
-
-    {% include 'main/test.html' %}
+    <div class = "features">
+    <h1>{{ title }}</h1>
+    <p>On our site we have simple information which can help you to solve any task</p>
+    <button class = "btn btn-warning">To page about us</button>
+        </div>
 {% endblock %}
