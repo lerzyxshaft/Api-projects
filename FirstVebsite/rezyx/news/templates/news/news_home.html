@@ -3,9 +3,13 @@
 {% block title %}News at page{% endblock %}
 
 {% block content %}
-    <div class = "features">
-    <h1>News at page</h1>
-    <p>On our site we have simple information which can help you to solve any task</p>
-    <button class = "btn btn-warning">To page about us </button>
-        </div>
+    <div class="features">
+        <h1>News at page</h1>
+            {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.anons }}</p>
+                </div>
+            {% endfor %}
+    </div>
 {% endblock %}
