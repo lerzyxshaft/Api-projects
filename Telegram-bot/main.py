@@ -16,6 +16,7 @@ def start(message):
     cur.close()
     conn.close()
 
+
     bot.send_message(message.chat.id, "hello just a second we will register you, Print your name")
     bot.register_next_step_handler(message, user_name)
 
