@@ -1,9 +1,7 @@
 import telebot
 import sqlite3
 
-from django.contrib.messages.context_processors import messages
-
-bot = telebot.TeleBot("783055knjklpl;kj4349:AAHlAKjnbmM1UmynK3HPEM1LxL9zk7zHsFA7cvc")
+bot = telebot.TeleBot("7830554349:AAHlAKM1UjhfsgflsdfgmynK3HPEM1LxL9zk7zHsFA7cvc")
 name = None
 
 @bot.message_handler(commands = ["start"])
