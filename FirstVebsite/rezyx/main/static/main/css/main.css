@@ -69,3 +69,10 @@ form{
     width: 500px;
     margin-top: 50px;
 }
+
+.about h1 {
+    color: blue;
+}
+.about p {
+    color: red;
+}

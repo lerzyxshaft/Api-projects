@@ -4,7 +4,7 @@ class Articles(models.Model):
     title = models.CharField('Name',max_length=50)
     anons = models.TextField('Anons', max_length=250)
     full_text = models.TextField('Post')
-    data = models.DateTimeField('Publish date')
+    date = models.DateTimeField('Publish date')
 
     def __str__(self):
         return self.title
