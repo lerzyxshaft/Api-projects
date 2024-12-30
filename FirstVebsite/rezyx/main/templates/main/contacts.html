@@ -1,8 +1,25 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}My contacts{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <h1>My telegram </h1>
-    <p>Instagram</p>
+    <div class = "features">
+    <h1>{{ title }}</h1>
+    <p>My contacts:</p>
+<ul>
+    <li>
+        <a href="tg://resolve?domain=RezyxDev">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" width="20" height="20">
+            Open in app
+        </a>
+    </li>
+    <li>
+        <a href="https://t.me/RezyxDev" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" width="20" height="20">
+            Open in browser
+        </a>
+    </li>
+</ul>
+
+        </div>
 {% endblock %}

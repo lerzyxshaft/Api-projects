@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
     data = {
@@ -8,7 +7,10 @@ def index(request):
     return render(request, 'main/index.html', data)
 
 def about(request):
-    return render(request, 'main/about.html')
+    data = {
+        'title': "My name is Maksym and it's my first Django project"
+    }
+    return render(request, 'main/about.html', data)
 
 def contacts(request):
     return render(request, "main/contacts.html")
